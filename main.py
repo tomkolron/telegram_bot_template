@@ -5,7 +5,7 @@ bot = telebot.TeleBot(API_KEY)
 
 command = 'THE NAME OF YOUR COMMAND'
 
-@bot.message_handler(commands=[command])
+@bot.message_handler(commands=[command + ':'])
 def greet(massage) :
     msg = str(massage.text).replace('/' + command, '').strip()
     if msg == '':
